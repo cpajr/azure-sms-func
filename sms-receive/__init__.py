@@ -19,16 +19,17 @@ def validMsgType(msg_type):
     '''
     Method to validate the predescribed message_type
     '''
-    if (msg_type != '1'):
-        return False
-    else:
+    msg_type_list = ['1','99']
+    if (msg_type in msg_type_list):
         return True
+    else:
+        return False
 
 def msg_format(msg_type):
     '''
     Method to return the predescribed message
     '''
-    msg_1 = 'ZAGG Customer Svc: For further self help options, please visit https://support.zagg.com'
+    msg_1 = 'ZAGG Customer Care: For further self-service options, please visit https://support.zagg.com'
 
     if (msg_type == '1'):
         return msg_1
